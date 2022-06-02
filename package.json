@@ -1,0 +1,22 @@
+{
+  "name": "javascript_challenge",
+  "version": "1.0.0",
+  "description": "**Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jduell12/JavaScript_Challenge.git"
+  },
+  "author": "Jessica Duell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jduell12/JavaScript_Challenge/issues"
+  },
+  "homepage": "https://github.com/jduell12/JavaScript_Challenge#readme",
+  "dependencies": {
+    "jest": "^28.1.0"
+  }
+}
