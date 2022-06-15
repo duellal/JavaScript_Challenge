@@ -32,17 +32,15 @@ plusFive(plusTen(0)) ➞ 15
 
 //Below is the last iteration of trying to make this work. I don't have all the other iterations I tried since I deleted them. All of my functions have worked on codePen but not here.
 
-const makePlusFunction = function(num){
-    return num;
+function makePlusFunction(baseNum){
+    return function(x){
+        return baseNum + x;
+    }
 }
 
-const plusFive = function (makePlusFunction){
-    return makePlusFunction + 5;
-}
+const plusFive = makePlusFunction(5)
 
-const plusTen = function (makePlusFunction){
-    return makePlusFunction + 10;
-}
+const plusTen = makePlusFunction(10)
 
 
 
