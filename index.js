@@ -106,6 +106,22 @@ getSecondLargest has the following parameters:
         p1.compareAge(p3) ➞ "Lily is the same age as me."
  */
 
+function Person(name, age){
+	this.name = name;
+	this.age = age;
+}
+
+Person.prototype.compareAge = function(Person1, Person2){
+	if(Person1.age < Person2.age){
+		return `${Person2.name} is older than me.`
+	} 
+	else if(Person1.age === Person2.age){
+		return `${Person2.name} is the same age as me.`
+	} 
+	else{return `${Person2.name} is younger than me.`}
+}
+
+
 
 module.exports = {
     makePlusFunction,

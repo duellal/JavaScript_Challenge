@@ -59,7 +59,7 @@ describe('getSecondLargest', ()=>{
     })
 })
 
-describe('Person class', ()=>{
+describe.only('Person class', ()=>{
     let diana;
     let p1;
     let p2;
@@ -71,6 +71,8 @@ describe('Person class', ()=>{
         p2 = new Person("Joel", 5)
         p3 = new Person("Lily", 20)
     })
+
+    console.log(diana)
     
     it('Person class initialized with name', ()=>{
         expect(diana.name).toBe('Diana')
