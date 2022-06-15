@@ -86,7 +86,15 @@ getSecondLargest has the following parameters:
     getSecondLargest([15, 20, 3, 1, 100]) --> 20
  */
 
-
+// Works on CodePen but not on the tests here:
+function getSecondLargest(array){
+	const sortedArray = array.sort();
+	
+	if(sortedArray[sortedArray.length-1] != sortedArray[sortedArray.length -2]){
+		return sortedArray[sortedArray.length-2]
+	} 
+	else{return sortedArray[sortedArray.length-3]}
+}
 
 // prototypes and inheritance 
 /**
@@ -106,6 +114,7 @@ getSecondLargest has the following parameters:
         p1.compareAge(p3) ➞ "Lily is the same age as me."
  */
 
+// Works on CodePen but not on the tests here:
 function Person(name, age){
 	this.name = name;
 	this.age = age;

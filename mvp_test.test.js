@@ -59,7 +59,7 @@ describe('getSecondLargest', ()=>{
     })
 })
 
-describe.only('Person class', ()=>{
+describe('Person class', ()=>{
     let diana;
     let p1;
     let p2;
