@@ -2,10 +2,10 @@
 //     filterArray,
 //     getSecondLargest,
 //     Person,} from './index'
-const {makePlusFunction,
-    filterArray,
-    getSecondLargest,
-    Person,} = require('./solution')
+// const {makePlusFunction,
+//         filterArray,
+//         getSecondLargest,
+//         Person,} = require('./solution')
     
 describe('makePlusFunction', ()=>{
     it('returns a new function', ()=>{

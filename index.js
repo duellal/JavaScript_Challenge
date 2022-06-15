@@ -15,6 +15,8 @@ plusFive(2) ➞ 7
 
 plusFive(-8) ➞ -3
 
+
+
 // Calling makePlusFunction(10) returns a new function that takes an input,
 // and returns the result when adding 10 to it.
 
@@ -27,6 +29,21 @@ plusTen(188) ➞ 198
 plusFive(plusTen(0)) ➞ 15
 * 
 */
+
+//Below is the last iteration of trying to make this work. I don't have all the other iterations I tried since I deleted them. All of my functions have worked on codePen but not here.
+
+const makePlusFunction = function(num){
+    return num;
+}
+
+const plusFive = function (makePlusFunction){
+    return makePlusFunction + 5;
+}
+
+const plusTen = function (makePlusFunction){
+    return makePlusFunction + 10;
+}
+
 
 
 // advanced array methods
@@ -43,6 +60,14 @@ plusFive(plusTen(0)) ➞ 15
  *      * Numbers in the array should not repeat
  *      * The original order must be maintained
  */
+
+// Works on codePen but not here:
+
+function filterArray(array){
+	const filter = array.filter(Number.isFinite);
+
+	return filter;
+}
 
 
 /**
