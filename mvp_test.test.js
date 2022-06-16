@@ -1,7 +1,7 @@
-// import {makePlusFunction,
-//     filterArray,
-//     getSecondLargest,
-//     Person,} from './index'
+const {makePlusFunction,
+        filterArray,
+        getSecondLargest,
+        Person,} = require('./index.js')
 // const {makePlusFunction,
 //         filterArray,
 //         getSecondLargest,
