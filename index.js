@@ -86,7 +86,9 @@ getSecondLargest has the following parameters:
 
 // Works on CodePen but not on the tests here:
 function getSecondLargest(array){
-	const sortedArray = array.sort();
+	const sortedArray = array.sort(function(a, b){
+        return a-b;
+    });
 	
 	if(sortedArray[sortedArray.length-1] != sortedArray[sortedArray.length -2]){
 		return sortedArray[sortedArray.length-2]
@@ -118,14 +120,14 @@ function Person(name, age){
 	this.age = age;
 }
 
-Person.prototype.compareAge = function(Person1, Person2){
-	if(Person1.age < Person2.age){
-		return `${Person2.name} is older than me.`
-	} 
-	else if(Person1.age === Person2.age){
-		return `${Person2.name} is the same age as me.`
-	} 
-	else{return `${Person2.name} is younger than me.`}
+Person.prototype.compareAge = function (Person2) {
+    if (this.age < Person2.age) {
+        return `${Person2.name} is older than me.`
+    }
+    else if (this.age === Person2.age) {
+        return `${Person2.name} is the same age as me.`
+    }
+    else { return `${Person2.name} is younger than me.` }
 }
 
 
