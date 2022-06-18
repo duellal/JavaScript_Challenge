@@ -30,8 +30,6 @@ plusFive(plusTen(0)) ➞ 15
 * 
 */
 
-//Below is the last iteration of trying to make this work. I don't have all the other iterations I tried since I deleted them. All of my functions have worked on codePen but not here.
-
 function makePlusFunction(baseNum){
     return function(x){
         return baseNum + x;
@@ -59,8 +57,6 @@ const plusTen = makePlusFunction(10)
  *      * The original order must be maintained
  */
 
-// Works on codePen but not here:
-
 function filterArray(array){
 	const filter = array.filter(Number.isFinite);
 
@@ -84,7 +80,6 @@ getSecondLargest has the following parameters:
     getSecondLargest([15, 20, 3, 1, 100]) --> 20
  */
 
-// Works on CodePen but not on the tests here:
 function getSecondLargest(array){
 	const sortedArray = array.sort(function(a, b){
         return a-b;
@@ -114,10 +109,11 @@ function getSecondLargest(array){
         p1.compareAge(p3) ➞ "Lily is the same age as me."
  */
 
-// Works on CodePen but not on the tests here:
-function Person(name, age){
+class Person{
+    constructor(name, age){
 	this.name = name;
 	this.age = age;
+}
 }
 
 Person.prototype.compareAge = function (Person2) {
