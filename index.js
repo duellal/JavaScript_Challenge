@@ -15,6 +15,8 @@ plusFive(2) ➞ 7
 
 plusFive(-8) ➞ -3
 
+
+
 // Calling makePlusFunction(10) returns a new function that takes an input,
 // and returns the result when adding 10 to it.
 
@@ -27,6 +29,17 @@ plusTen(188) ➞ 198
 plusFive(plusTen(0)) ➞ 15
 * 
 */
+
+function makePlusFunction(baseNum){
+    return function(x){
+        return baseNum + x;
+    }
+}
+
+const plusFive = makePlusFunction(5)
+
+const plusTen = makePlusFunction(10)
+
 
 
 // advanced array methods
@@ -43,6 +56,12 @@ plusFive(plusTen(0)) ➞ 15
  *      * Numbers in the array should not repeat
  *      * The original order must be maintained
  */
+
+function filterArray(array){
+	const filter = array.filter(Number.isFinite);
+
+	return filter;
+}
 
 
 /**
@@ -61,7 +80,16 @@ getSecondLargest has the following parameters:
     getSecondLargest([15, 20, 3, 1, 100]) --> 20
  */
 
-
+function getSecondLargest(array){
+	const sortedArray = array.sort(function(a, b){
+        return a-b;
+    });
+	
+	if(sortedArray[sortedArray.length-1] != sortedArray[sortedArray.length -2]){
+		return sortedArray[sortedArray.length-2]
+	} 
+	else{return sortedArray[sortedArray.length-3]}
+}
 
 // prototypes and inheritance 
 /**
@@ -80,6 +108,24 @@ getSecondLargest has the following parameters:
         p2.compareAge(p1) ➞ "Samuel is younger than me."
         p1.compareAge(p3) ➞ "Lily is the same age as me."
  */
+
+class Person{
+    constructor(name, age){
+	this.name = name;
+	this.age = age;
+}
+}
+
+Person.prototype.compareAge = function (Person2) {
+    if (this.age < Person2.age) {
+        return `${Person2.name} is older than me.`
+    }
+    else if (this.age === Person2.age) {
+        return `${Person2.name} is the same age as me.`
+    }
+    else { return `${Person2.name} is younger than me.` }
+}
+
 
 
 module.exports = {

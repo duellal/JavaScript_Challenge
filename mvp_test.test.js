@@ -1,11 +1,11 @@
-// import {makePlusFunction,
-//     filterArray,
-//     getSecondLargest,
-//     Person,} from './index'
 const {makePlusFunction,
-    filterArray,
-    getSecondLargest,
-    Person,} = require('./solution')
+        filterArray,
+        getSecondLargest,
+        Person,} = require('./index.js')
+// const {makePlusFunction,
+//         filterArray,
+//         getSecondLargest,
+//         Person,} = require('./solution')
     
 describe('makePlusFunction', ()=>{
     it('returns a new function', ()=>{
@@ -71,6 +71,8 @@ describe('Person class', ()=>{
         p2 = new Person("Joel", 5)
         p3 = new Person("Lily", 20)
     })
+
+    console.log(diana)
     
     it('Person class initialized with name', ()=>{
         expect(diana.name).toBe('Diana')
